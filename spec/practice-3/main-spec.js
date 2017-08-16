@@ -52,8 +52,7 @@ describe("Student", () => {
 
   });
 
-  it("should introduce student is a leader, when class assign this student to be a lea" +
-      "der",
+  it("should introduce student is a leader, when class assign this student to be a leader",
   () => {
     let clazz = new Class(2);
     let student = new Student("Tom", 21, clazz);
