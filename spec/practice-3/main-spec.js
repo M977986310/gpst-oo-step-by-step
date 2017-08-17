@@ -40,15 +40,13 @@ describe("Student", () => {
 
   });
 
-  it("should introduce there is not class assigned to this student, when this studen d" +
-      "oesn't append to this class",
+  it("should introduce there is not class assigned to this student, when this student doesn't append to this class",
   () => {
     let clazz = new Class(2);
     let student = new Student("Tom", 21, clazz);
     let introduce = student.introduce();
 
-    expect(introduce).toBe("My name is Tom. I am 21 years old. I am a Student. I haven't been allowed to joi" +
-        "n Class.");
+    expect(introduce).toBe("My name is Tom. I am 21 years old. I am a Student. I haven't been allowed to join Class.");
 
   });
 
@@ -101,8 +99,7 @@ describe("Teacher", () => {
 
   });
 
-  it("should return false, when student hasn't been appended this student to this clas" +
-      "s which teacher teaches",
+  it("should return false, when student hasn't been appended this student to this class which teacher teaches",
   () => {
     let clazz1 = new Class(2);
     let clazz2 = new Class(3);
@@ -149,8 +146,7 @@ describe("Class", () => {
     expect(result).toBe("It is not one of us.");
   });
 
-  it("should call teacher's addended member event, when a student is appended to teach" +
-      "er's own classes",
+  it("should call teacher's addended member event, when a student is appended to teacher's own classes",
   () => {
     let clazz = new Class(2);
     let student = new Student("Jerry", 21, clazz);
@@ -160,8 +156,7 @@ describe("Class", () => {
     expect(teacher.notifyStudentAppended).toHaveBeenCalledWith("Jerry has joined Class 2");
   });
 
-  it("should call teacher's assign class leader event, when a student is assigned to b" +
-      "e a leader in teacher's own classes",
+  it("should call teacher's assign class leader event, when a student is assigned to be a leader in teacher's own classes",
   () => {
     let clazz = new Class(2);
     let student = new Student("Jerry", 21, clazz);
